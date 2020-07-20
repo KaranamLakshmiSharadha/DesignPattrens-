@@ -11,11 +11,9 @@ public class Dog extends Ani{
         this.typeOfFood = typeOfFood;
     }
     
-  
     public String feed() {
-        feedingAPI.feed(timesADay, amount, typeOfFood);
+        ((FeedingAPI) feedingAPI).feed(timesADay, amount, typeOfFood);
         return "Feeding a big dog, " + timesADay + " times a day with " + 
         	amount + " g of " + typeOfFood;
-
-}
+    }
 }
